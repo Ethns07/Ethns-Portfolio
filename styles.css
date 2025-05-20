@@ -6,6 +6,7 @@
 }
 body{
     background-color: none;
+    overflow-x: hidden;
     color: aliceblue;
     font-family: 'Poppins', sans-serif;
     /* background: url(/images/bgVideo.mp4) no-repeat center center fixed;
@@ -399,6 +400,28 @@ a:hover{
     background-color: #d9832e;
     color: aliceblue;
 }
+.scrollToTopBtn{
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #999999;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.scrollToTopBtn .fa-arrow-up{
+    font-size: 22px; 
+    color: #333; 
+    background-color: transparent;
+}
 footer{
     height: 80px;
     display: flex; 
@@ -416,27 +439,179 @@ footer{
 }
 
 @media (max-width: 768px) {
-    .header h4{
-        padding-right: 0px; 
+    .header {
+        height: 40px;
+        padding: 0 10px;
     }
-    .header nav{
+    .header h4{
+        padding-left: 10px;
+        padding-right: 0px; 
+        font-size: 16px;
+    }
+    nav{
+        gap: 10px;
         padding-left: 0px;
     }
+    nav a {
+        font-size: 10px;
+        padding: 4px 4px;
+    }
+    .main-text{
+        width: 90vw;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+    }
     .main-text h1{
-        font-size: 40px;
+        font-size: 28px;
+        text-align: center;
     }
     .main-text p{
-        font-size: 20px;
+        font-size: 10px;
+        overflow: auto;
+        text-align: center;
+    }
+    .buttons{
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
     }
     .buttons button{
-        width: 50px; 
-        height: 20px; 
+        width: 90px; 
+        height: 28px; 
+        font-size: 12px;
+    }
+    .section-text{
+        padding-top: 30px;
     }
     .section-text h2{
+        font-size: 22px;
+    }
+    .section-text p{
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .section{
+        padding: 0 10px;
+    }
+    .about2{
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 10px;
+    }
+    .services-card{
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    .services-card .card{
+        width: 80vw;
+        min-width: 0;
+        height: auto;
+        padding: 10px;
         font-size: 10px;
     }
     .resume-content{
         flex-direction: column;
-        padding: 0px 20px;
+        padding: 0px 10px;
+        gap: 10px;
+    }
+    .resume-card{
+        width: 80vw;
+        min-width: 0;
+        height: auto;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .portfolio-content{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .portfolio-content .portfolio-content-buttons{
+        flex-direction: column;
+        gap: 8px;
+    }
+    .portfolio-content-buttons button{
+        width: 80px; 
+        height: 28px; 
+        font-size: 12px;
+        margin: 5px 0;
+    }
+    .products-images{
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-top: 10px;
+    }
+    .products-images img{
+        width: 80vw;
+        height: 120px;
+        object-fit: cover;
+    }
+    .blog-content{
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+    .blog-card{
+        width: 80vw;
+        min-width: 0;
+        height: auto;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .blog-card img{
+        width: 80vw;
+        height: 120px;
+        object-fit: cover;
+    }
+    .contact-form{
+        padding: 10px;
+    }
+    .contact-form input,
+    .contact-form textarea{
+        width: 80vw;
+        font-size: 12px;
+    }
+    .contact-form button{
+        width: 80vw;
+        max-width: 150px;
+        font-size: 14px;
+    }
+    footer{
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        padding: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+    .footer p{
+        padding: 5px 0;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-text h1{
+        font-size: 20px;
+    }
+    .main-text p{
+        font-size: 12px;
+    }
+    .section-text h2{
+        font-size: 16px;
+    }
+    .resume-card,
+    .services-card .card,
+    .blog-card,
+    .products-images img {
+        width: 98vw;
+        min-width: 0;
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 98vw;
+        max-width: 100%;
     }
 }
