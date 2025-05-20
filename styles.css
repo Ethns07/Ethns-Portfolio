@@ -419,8 +419,7 @@ a:hover{
 }
 .scrollToTopBtn .fa-arrow-up{
     font-size: 22px; 
-    color: #333; 
-    background-color: transparent;
+    color: #333; background-color: transparent;
 }
 footer{
     height: 80px;
